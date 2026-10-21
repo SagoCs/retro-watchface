@@ -1,39 +1,33 @@
 # Credits & licenses
 
-Code, layout and the palette system: MIT (see `LICENSE`).
+## The faces
+
+The built watch faces (`.bin` files) may be freely installed, used, and
+shared. Attribution appreciated, not required.
 
 ## Fonts (SIL Open Font License 1.1)
 
-| Font | Author | Used for |
-|---|---|---|
-| [DSEG7 Classic Bold](https://github.com/keshikan/DSEG) | keshikan | time & temperature digits |
-| [Michroma](https://fonts.google.com/specimen/Michroma) | Vernon Adams | wordmark, labels, date row |
-
-Both are bundled in `tools/fonts/` under the SIL Open Font License 1.1
-(`licenses/OFL-1.1.txt`). The generator renders their glyphs to bitmaps at
-build time; the license terms travel with any redistribution of the font
-files.
+The digits are rendered from [DSEG7 Classic Bold](https://github.com/keshikan/DSEG)
+by keshikan; all other text from [Michroma](https://fonts.google.com/specimen/Michroma)
+by Vernon Adams. Both fonts are licensed under the
+[SIL Open Font License 1.1](https://openfontlicense.org); the faces contain
+bitmap renders created from them at build time.
 
 ## Weather icons (CC BY-SA 4.0)
 
 The weather icons are derived from
 [Dhole/weather-pixel-icons](https://github.com/Dhole/weather-pixel-icons)
 © Dhole, licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-
-Modifications: rescaled 2× (nearest neighbor) and color-tinted per colorway
-at build time. The source bitmaps live in `face/assets-src/weather/` and the
-tinted derivatives ship inside the built faces; both are licensed under the
-same CC BY-SA 4.0 (see `face/assets-src/weather/LICENSE.txt`). Any
-redistribution of these icons - standalone or inside a face - must keep the
-attribution and the share-alike terms.
+Modifications: rescaled 2× and color-tinted per colorway. The icon content
+of the faces is therefore licensed under CC BY-SA 4.0 as well - if you
+redistribute the faces or reuse the icons, keep this attribution and share
+alike.
 
 ## Toolkit
 
-Built with [band10-toolkit](https://github.com/utsabfdahal/band10-toolkit)
-(MIT) - native `.bin` packer verified on real Band 10 hardware. Not
-redistributed here; clone it into `tools/band10-toolkit` to build (see README).
+Built with [band10-toolkit](https://github.com/utsabfdahal/band10-toolkit) (MIT).
 
 ## Disclaimer
 
-This is a hobby project. It is not affiliated with, endorsed by, or connected
-to Xiaomi or Casio in any way.
+Hobby project - not affiliated with, endorsed by, or connected to Xiaomi or
+Casio in any way.
