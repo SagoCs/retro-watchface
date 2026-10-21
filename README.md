@@ -1,5 +1,3 @@
-# RETRO LCD
-
 ![RETRO LCD - five colorways for the Xiaomi Smart Band 10](header.png)
 
 A retro-inspired LCD watch face for the **Xiaomi Smart Band 10** with five color options.
