@@ -17,7 +17,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLKIT = os.path.join(ROOT, "tools", "band10-toolkit")
 DIST = os.path.join(ROOT, "face", "dist")
-COLORWAYS = ["white", "amber", "green", "ice"]
+COLORWAYS = ["white", "amber", "green", "ice", "red"]
 
 
 def run_toolkit(args):

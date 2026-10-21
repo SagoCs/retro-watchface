@@ -11,7 +11,7 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD = os.path.join(ROOT, "build")
-COLORWAYS = ["white", "amber", "green", "ice"]
+COLORWAYS = ["white", "amber", "green", "ice", "red"]
 
 
 def zoom(im, f):
