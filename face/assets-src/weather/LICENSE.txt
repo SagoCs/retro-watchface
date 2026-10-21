@@ -1,0 +1,16 @@
+The icon bitmaps in this folder are derived from
+https://github.com/Dhole/weather-pixel-icons
+© Dhole, licensed under Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Modifications: rescaled 2x (nearest neighbor). Build-time color tinting
+produces further derivatives distributed inside the built watch faces.
+
+These bitmaps - and any derivatives of them, including the tinted versions
+inside built faces - are licensed under CC BY-SA 4.0: you are free to share
+and adapt them for any purpose, provided you credit Dhole, link the license,
+indicate changes, and distribute derivatives under the same license.
+
+The rest of this project is NOT covered by this notice (see the root
+LICENSE and CREDITS.md).
