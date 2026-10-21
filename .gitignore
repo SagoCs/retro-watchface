@@ -1,0 +1,10 @@
+# Local build tooling (see README: clone band10-toolkit here)
+tools/band10-toolkit/
+
+# Per-colorway staging projects and toolkit intermediates
+build/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

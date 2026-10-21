@@ -1,0 +1,678 @@
+{
+  "$schema": "../tools/band10-toolkit/schemas/layout.schema.json",
+  "formatVersion": 1,
+  "canvas": {
+    "width": 212,
+    "height": 520,
+    "clip": "pill"
+  },
+  "assets": {
+    "digitSets": {
+      "aod-time": {
+        "digits": [
+          "assets/aod/time-0.png",
+          "assets/aod/time-1.png",
+          "assets/aod/time-2.png",
+          "assets/aod/time-3.png",
+          "assets/aod/time-4.png",
+          "assets/aod/time-5.png",
+          "assets/aod/time-6.png",
+          "assets/aod/time-7.png",
+          "assets/aod/time-8.png",
+          "assets/aod/time-9.png"
+        ],
+        "minus": "assets/aod/time-minus.png"
+      },
+      "aod-date7": {
+        "digits": [
+          "assets/aod/date7-0.png",
+          "assets/aod/date7-1.png",
+          "assets/aod/date7-2.png",
+          "assets/aod/date7-3.png",
+          "assets/aod/date7-4.png",
+          "assets/aod/date7-5.png",
+          "assets/aod/date7-6.png",
+          "assets/aod/date7-7.png",
+          "assets/aod/date7-8.png",
+          "assets/aod/date7-9.png"
+        ],
+        "minus": "assets/aod/date7-minus.png"
+      },
+      "time": {
+        "digits": [
+          "assets/digits/time-0.png",
+          "assets/digits/time-1.png",
+          "assets/digits/time-2.png",
+          "assets/digits/time-3.png",
+          "assets/digits/time-4.png",
+          "assets/digits/time-5.png",
+          "assets/digits/time-6.png",
+          "assets/digits/time-7.png",
+          "assets/digits/time-8.png",
+          "assets/digits/time-9.png"
+        ],
+        "minus": "assets/digits/time-minus.png"
+      },
+      "temp": {
+        "digits": [
+          "assets/digits/temp-0.png",
+          "assets/digits/temp-1.png",
+          "assets/digits/temp-2.png",
+          "assets/digits/temp-3.png",
+          "assets/digits/temp-4.png",
+          "assets/digits/temp-5.png",
+          "assets/digits/temp-6.png",
+          "assets/digits/temp-7.png",
+          "assets/digits/temp-8.png",
+          "assets/digits/temp-9.png"
+        ],
+        "minus": "assets/digits/temp-minus.png"
+      },
+      "date7": {
+        "digits": [
+          "assets/digits/date7-0.png",
+          "assets/digits/date7-1.png",
+          "assets/digits/date7-2.png",
+          "assets/digits/date7-3.png",
+          "assets/digits/date7-4.png",
+          "assets/digits/date7-5.png",
+          "assets/digits/date7-6.png",
+          "assets/digits/date7-7.png",
+          "assets/digits/date7-8.png",
+          "assets/digits/date7-9.png"
+        ],
+        "minus": "assets/digits/date7-minus.png"
+      }
+    }
+  },
+  "normal": {
+    "background": "#000000",
+    "widgets": [
+      {
+        "id": "background",
+        "label": "Static background",
+        "type": "image",
+        "asset": "assets/background.png",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "id": "hours",
+        "label": "Hours",
+        "type": "number",
+        "source": "hour",
+        "digitSet": "time",
+        "digits": 2,
+        "align": "left",
+        "spacing": 3,
+        "leadingZero": true,
+        "x": 26,
+        "y": 122,
+        "z": 1
+      },
+      {
+        "id": "colon",
+        "label": "Time colon",
+        "type": "image",
+        "asset": "assets/colon.png",
+        "x": 100,
+        "y": 122,
+        "z": 1
+      },
+      {
+        "id": "minutes",
+        "label": "Minutes",
+        "type": "number",
+        "source": "minute",
+        "digitSet": "time",
+        "digits": 2,
+        "align": "left",
+        "spacing": 3,
+        "leadingZero": true,
+        "x": 118,
+        "y": 122,
+        "z": 1
+      },
+      {
+        "id": "weekday",
+        "label": "Weekday",
+        "type": "image-list",
+        "source": "weekday",
+        "fallback": "exact",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/text/weekday-0.png"
+          },
+          {
+            "value": 1,
+            "asset": "assets/text/weekday-1.png"
+          },
+          {
+            "value": 2,
+            "asset": "assets/text/weekday-2.png"
+          },
+          {
+            "value": 3,
+            "asset": "assets/text/weekday-3.png"
+          },
+          {
+            "value": 4,
+            "asset": "assets/text/weekday-4.png"
+          },
+          {
+            "value": 5,
+            "asset": "assets/text/weekday-5.png"
+          },
+          {
+            "value": 6,
+            "asset": "assets/text/weekday-6.png"
+          }
+        ],
+        "x": 28,
+        "y": 214,
+        "z": 2
+      },
+      {
+        "id": "day",
+        "label": "Day of month",
+        "type": "number",
+        "source": "day",
+        "digitSet": "date7",
+        "digits": 2,
+        "align": "left",
+        "spacing": 1,
+        "leadingZero": true,
+        "x": 92,
+        "y": 214,
+        "z": 2
+      },
+      {
+        "id": "month",
+        "label": "Month",
+        "type": "image-list",
+        "source": "month",
+        "fallback": "exact",
+        "items": [
+          {
+            "value": 1,
+            "asset": "assets/text/month-1.png"
+          },
+          {
+            "value": 2,
+            "asset": "assets/text/month-2.png"
+          },
+          {
+            "value": 3,
+            "asset": "assets/text/month-3.png"
+          },
+          {
+            "value": 4,
+            "asset": "assets/text/month-4.png"
+          },
+          {
+            "value": 5,
+            "asset": "assets/text/month-5.png"
+          },
+          {
+            "value": 6,
+            "asset": "assets/text/month-6.png"
+          },
+          {
+            "value": 7,
+            "asset": "assets/text/month-7.png"
+          },
+          {
+            "value": 8,
+            "asset": "assets/text/month-8.png"
+          },
+          {
+            "value": 9,
+            "asset": "assets/text/month-9.png"
+          },
+          {
+            "value": 10,
+            "asset": "assets/text/month-10.png"
+          },
+          {
+            "value": 11,
+            "asset": "assets/text/month-11.png"
+          },
+          {
+            "value": 12,
+            "asset": "assets/text/month-12.png"
+          }
+        ],
+        "x": 132,
+        "y": 214,
+        "z": 2
+      },
+      {
+        "id": "weather-icon",
+        "label": "Weather condition",
+        "type": "image-list",
+        "source": "weatherCondition",
+        "fallback": "floor",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/weather/sun.png"
+          },
+          {
+            "value": 1,
+            "asset": "assets/weather/part.png"
+          },
+          {
+            "value": 2,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 3,
+            "asset": "assets/weather/shower.png"
+          },
+          {
+            "value": 4,
+            "asset": "assets/weather/thunder.png"
+          },
+          {
+            "value": 6,
+            "asset": "assets/weather/sleet.png"
+          },
+          {
+            "value": 7,
+            "asset": "assets/weather/rain.png"
+          },
+          {
+            "value": 13,
+            "asset": "assets/weather/snow.png"
+          },
+          {
+            "value": 18,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 19,
+            "asset": "assets/weather/sleet.png"
+          },
+          {
+            "value": 20,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 21,
+            "asset": "assets/weather/rain.png"
+          },
+          {
+            "value": 26,
+            "asset": "assets/weather/snow.png"
+          },
+          {
+            "value": 29,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 32,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 33,
+            "asset": "assets/weather/snow.png"
+          },
+          {
+            "value": 49,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 53,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 57,
+            "asset": "assets/weather/cloud.png"
+          },
+          {
+            "value": 99,
+            "asset": "assets/weather/unknown.png"
+          },
+          {
+            "value": 301,
+            "asset": "assets/weather/rain.png"
+          }
+        ],
+        "x": 28,
+        "y": 254,
+        "z": 3
+      },
+      {
+        "id": "temperature",
+        "label": "Temperature",
+        "type": "number",
+        "source": "temperatureC",
+        "digitSet": "temp",
+        "digits": 2,
+        "align": "left",
+        "spacing": 5,
+        "leadingZero": false,
+        "unitAsset": "assets/text/unit-degc.png",
+        "x": 121,
+        "y": 282,
+        "z": 3
+      },
+      {
+        "id": "activity-bar",
+        "label": "Step goal bar",
+        "type": "image-list",
+        "source": "stepProgress",
+        "fallback": "floor",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/bars/activity-0.png"
+          },
+          {
+            "value": 10,
+            "asset": "assets/bars/activity-1.png"
+          },
+          {
+            "value": 20,
+            "asset": "assets/bars/activity-2.png"
+          },
+          {
+            "value": 30,
+            "asset": "assets/bars/activity-3.png"
+          },
+          {
+            "value": 40,
+            "asset": "assets/bars/activity-4.png"
+          },
+          {
+            "value": 50,
+            "asset": "assets/bars/activity-5.png"
+          },
+          {
+            "value": 60,
+            "asset": "assets/bars/activity-6.png"
+          },
+          {
+            "value": 70,
+            "asset": "assets/bars/activity-7.png"
+          },
+          {
+            "value": 80,
+            "asset": "assets/bars/activity-8.png"
+          },
+          {
+            "value": 90,
+            "asset": "assets/bars/activity-9.png"
+          },
+          {
+            "value": 100,
+            "asset": "assets/bars/activity-10.png"
+          }
+        ],
+        "x": 23,
+        "y": 361,
+        "z": 4
+      },
+      {
+        "id": "battery-icon",
+        "label": "Battery icon",
+        "type": "image-list",
+        "source": "battery",
+        "fallback": "floor",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/battery/icon-0.png"
+          },
+          {
+            "value": 20,
+            "asset": "assets/battery/icon-1.png"
+          },
+          {
+            "value": 40,
+            "asset": "assets/battery/icon-2.png"
+          },
+          {
+            "value": 60,
+            "asset": "assets/battery/icon-3.png"
+          },
+          {
+            "value": 80,
+            "asset": "assets/battery/icon-4.png"
+          },
+          {
+            "value": 100,
+            "asset": "assets/battery/icon-5.png"
+          }
+        ],
+        "x": 159,
+        "y": 402,
+        "z": 5
+      },
+      {
+        "id": "battery-bar",
+        "label": "Battery bar",
+        "type": "image-list",
+        "source": "battery",
+        "fallback": "floor",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/bars/battery-0.png"
+          },
+          {
+            "value": 10,
+            "asset": "assets/bars/battery-1.png"
+          },
+          {
+            "value": 20,
+            "asset": "assets/bars/battery-2.png"
+          },
+          {
+            "value": 30,
+            "asset": "assets/bars/battery-3.png"
+          },
+          {
+            "value": 40,
+            "asset": "assets/bars/battery-4.png"
+          },
+          {
+            "value": 50,
+            "asset": "assets/bars/battery-5.png"
+          },
+          {
+            "value": 60,
+            "asset": "assets/bars/battery-6.png"
+          },
+          {
+            "value": 70,
+            "asset": "assets/bars/battery-7.png"
+          },
+          {
+            "value": 80,
+            "asset": "assets/bars/battery-8.png"
+          },
+          {
+            "value": 90,
+            "asset": "assets/bars/battery-9.png"
+          },
+          {
+            "value": 100,
+            "asset": "assets/bars/battery-10.png"
+          }
+        ],
+        "x": 23,
+        "y": 426,
+        "z": 5
+      }
+    ]
+  },
+  "aod": {
+    "enabled": true,
+    "background": "#000000",
+    "widgets": [
+      {
+        "id": "aod-background",
+        "label": "AOD static background",
+        "type": "image",
+        "asset": "assets/aod/background.png",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "id": "aod-hours",
+        "label": "AOD hours",
+        "type": "number",
+        "source": "hour",
+        "digitSet": "aod-time",
+        "digits": 2,
+        "align": "left",
+        "spacing": 3,
+        "leadingZero": true,
+        "x": 26,
+        "y": 227,
+        "z": 1
+      },
+      {
+        "id": "aod-colon",
+        "label": "AOD colon",
+        "type": "image",
+        "asset": "assets/aod/colon.png",
+        "x": 100,
+        "y": 227,
+        "z": 1
+      },
+      {
+        "id": "aod-minutes",
+        "label": "AOD minutes",
+        "type": "number",
+        "source": "minute",
+        "digitSet": "aod-time",
+        "digits": 2,
+        "align": "left",
+        "spacing": 3,
+        "leadingZero": true,
+        "x": 118,
+        "y": 227,
+        "z": 1
+      },
+      {
+        "id": "aod-weekday",
+        "label": "AOD weekday",
+        "type": "image-list",
+        "source": "weekday",
+        "fallback": "exact",
+        "items": [
+          {
+            "value": 0,
+            "asset": "assets/aod/weekday-0.png"
+          },
+          {
+            "value": 1,
+            "asset": "assets/aod/weekday-1.png"
+          },
+          {
+            "value": 2,
+            "asset": "assets/aod/weekday-2.png"
+          },
+          {
+            "value": 3,
+            "asset": "assets/aod/weekday-3.png"
+          },
+          {
+            "value": 4,
+            "asset": "assets/aod/weekday-4.png"
+          },
+          {
+            "value": 5,
+            "asset": "assets/aod/weekday-5.png"
+          },
+          {
+            "value": 6,
+            "asset": "assets/aod/weekday-6.png"
+          }
+        ],
+        "x": 28,
+        "y": 319,
+        "z": 2
+      },
+      {
+        "id": "aod-day",
+        "label": "AOD day of month",
+        "type": "number",
+        "source": "day",
+        "digitSet": "aod-date7",
+        "digits": 2,
+        "align": "left",
+        "spacing": 1,
+        "leadingZero": true,
+        "x": 92,
+        "y": 319,
+        "z": 2
+      },
+      {
+        "id": "aod-month",
+        "label": "AOD month",
+        "type": "image-list",
+        "source": "month",
+        "fallback": "exact",
+        "items": [
+          {
+            "value": 1,
+            "asset": "assets/aod/month-1.png"
+          },
+          {
+            "value": 2,
+            "asset": "assets/aod/month-2.png"
+          },
+          {
+            "value": 3,
+            "asset": "assets/aod/month-3.png"
+          },
+          {
+            "value": 4,
+            "asset": "assets/aod/month-4.png"
+          },
+          {
+            "value": 5,
+            "asset": "assets/aod/month-5.png"
+          },
+          {
+            "value": 6,
+            "asset": "assets/aod/month-6.png"
+          },
+          {
+            "value": 7,
+            "asset": "assets/aod/month-7.png"
+          },
+          {
+            "value": 8,
+            "asset": "assets/aod/month-8.png"
+          },
+          {
+            "value": 9,
+            "asset": "assets/aod/month-9.png"
+          },
+          {
+            "value": 10,
+            "asset": "assets/aod/month-10.png"
+          },
+          {
+            "value": 11,
+            "asset": "assets/aod/month-11.png"
+          },
+          {
+            "value": 12,
+            "asset": "assets/aod/month-12.png"
+          }
+        ],
+        "x": 132,
+        "y": 319,
+        "z": 2
+      }
+    ]
+  }
+}
