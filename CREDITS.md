@@ -29,5 +29,4 @@ Built with [band10-toolkit](https://github.com/utsabfdahal/band10-toolkit) (MIT)
 
 ## Disclaimer
 
-Hobby project - not affiliated with, endorsed by, or connected to Xiaomi or
-Casio in any way.
+Hobby project - not affiliated with, endorsed by, or connected to Xiaomi or any other watch company in any way.
